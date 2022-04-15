@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float maxSpeed;
    
-   private Rigidbody2D rb;
-   private float moveDirection;
+    private Rigidbody2D rb;
+    private float moveDirection;
 
     void Awake()
     {
@@ -19,16 +19,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        moveDirection = Input.GetAxis("Horizontal");
-
-        if(moveDirection != 1)
-            if(moveDirection != -1)
-                moveSpeed = 2;
-                rb.velocity = new Vector2(0, rb.velocity.y);
         
     }
 
     void FixedUpdate(){
+        moveDirection = Input.GetAxis("Horizontal");
+
+        if(moveDirection != 1)
+            if(moveDirection != -1)
+                moveSpeed = 1;
+                rb.velocity = new Vector2(0, rb.velocity.y);
 
         if(moveDirection != 0) 
             if(moveSpeed <= maxSpeed){
