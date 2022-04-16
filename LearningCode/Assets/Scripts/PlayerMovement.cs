@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = Input.GetAxisRaw("Horizontal");
         if(moveDirection > 0.1f || moveDirection < -0.1f)
         {
-            rb.AddForce(new Vector2 (moveDirection * moveSpeed, 0), ForceMode2D.Impulse);
+            rb.velocity = new Vector2 (moveDirection * moveSpeed, rb.velocity.y);
         }
     }
 
