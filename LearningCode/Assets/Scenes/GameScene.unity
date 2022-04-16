@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 220462320}
   - component: {fileID: 220462319}
   - component: {fileID: 220462318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,6 +612,12 @@ MonoBehaviour:
   ramp: 4
   moveSpeed: 0.5
   maxSpeed: 10
+  JumpHeight: 5
+  isGrounded: 0
+  RayCastLength: 0.6
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
