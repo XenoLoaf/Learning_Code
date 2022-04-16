@@ -40,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2 (moveDirection * moveSpeed, rb.velocity.y);
         }
+        else
+        {
+            rb.velocity = new Vector2(0,rb.velocity.y);
+        }
     }
 
     void Jump()
