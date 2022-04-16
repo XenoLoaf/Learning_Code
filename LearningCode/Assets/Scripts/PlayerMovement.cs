@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     CircleCollider2D circleCollider;
 
     public LayerMask ground;
+
+    public AudioSource audioSource;
+    public AudioClip clip;
+    public float volume=0.5f;
 
     void Awake()
     {
@@ -60,5 +65,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        audioSource.PlayOneShot(clip, volume);
+        return;
     }
 }
