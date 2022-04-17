@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 
 public class Control : MonoBehaviour
 {
-
     public AudioMixer mixer;
 
     void Update()
